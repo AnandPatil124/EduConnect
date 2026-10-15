@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduConnect helps students access free learning resources and practice quizzes, supporting SDG 4: Quality Education.">
+  <title>EduConnect — Learn Smarter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="EduConnect home">
+      <span class="brand-mark">E</span><span>Edu<span class="brand-accent">Connect</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#materials" class="nav-link">Study Materials</a>
+      <a href="#quizzes" class="nav-link">Quizzes</a>
+      <a href="#progress" class="nav-link">My Progress</a>
+      <a href="#about" class="nav-link">About SDG 4</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme" title="Switch color theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> LEARNING FOR EVERYONE</div>
+        <h1>Learn smarter.<br><span class="gradient-text">Grow further.</span></h1>
+        <p class="hero-description">Your friendly space to discover study notes, explore new subjects, and test what you know — all in one place.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#materials">Explore resources <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#quizzes">Take a quick quiz</a>
+        </div>
+        <div class="hero-trust"><span class="avatar-stack"><i>✦</i><i>📘</i><i>✓</i></span><span>Free learning resources for curious minds</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Learning illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-card float-top"><span class="float-icon purple">✧</span><span><b>Keep learning</b><small>One step at a time</small></span></div>
+        <div class="learning-card">
+          <div class="learning-card-top"><span class="mini-label">YOUR LEARNING SPACE</span><span class="live-dot"></span></div>
+          <div class="book-illustration"><div class="book book-back"></div><div class="book book-front"><span>✦</span><b>LEARN</b><small>ANYWHERE</small></div><div class="sparkle sparkle-a">✦</div><div class="sparkle sparkle-b">✧</div></div>
+          <h3>Small steps. Big progress.</h3><p>Build knowledge at your own pace.</p>
+          <div class="fake-progress"><span></span></div><div class="progress-caption"><span>Your next chapter</span><b>Start today</b></div>
+        </div>
+        <div class="floating-card float-bottom"><span class="float-icon green">✓</span><span><b>Practice makes progress</b><small>Try a quiz today</small></span></div>
+      </div>
+    </section>
+
+    <section class="stats-strip section" aria-label="Website highlights">
+      <div class="stat"><span class="stat-icon">▤</span><div><b id="resourceCount">12+</b><span>Learning resources</span></div></div>
+      <div class="stat"><span class="stat-icon">◎</span><div><b>5</b><span>Core subject areas</span></div></div>
+      <div class="stat"><span class="stat-icon">✓</span><div><b id="quizCountStat">4</b><span>Practice quizzes</span></div></div>
+      <div class="stat"><span class="stat-icon">♡</span><div><b>Free</b><span>Learning for all</span></div></div>
+    </section>
+
+    <section class="section content-section" id="materials">
+      <div class="section-heading">
+        <div><div class="eyebrow">YOUR NEXT DISCOVERY</div><h2>Explore study materials</h2><p>Find a starting point, build a skill, and keep moving forward.</p></div>
+        <a class="text-link" href="#materials-list">Browse all resources <span>→</span></a>
+      </div>
+      <div class="search-row">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="resourceSearch" placeholder="Search notes, topics, or subjects..." aria-label="Search learning resources"><kbd>⌘ K</kbd></label>
+        <label class="select-wrap"><span class="sr-only">Filter by subject</span><select id="subjectFilter"><option value="all">All subjects</option><option value="Python">Python</option><option value="DBMS">DBMS</option><option value="Machine Learning">Machine Learning</option><option value="Computer Networks">Computer Networks</option><option value="Artificial Intelligence">Artificial Intelligence</option></select></label>
+      </div>
+      <div class="resource-grid" id="materials-list">
+        <article class="resource-card" data-subject="Python" data-search="python basics variables loops functions beginner notes">
+          <div class="resource-art art-python"><span>Py</span><i>⌘</i></div><div class="resource-body"><div class="card-meta"><span class="pill pill-blue">PYTHON</span><span>📄 Notes</span></div><h3>Python Fundamentals</h3><p>Start with variables, data types, conditions, loops, and functions.</p><button class="resource-open" data-note="python">Read quick notes <span>→</span></button></div>
+        </article>
+        <article class="resource-card" data-subject="DBMS" data-search="dbms database sql tables keys normalization notes">
+          <div class="resource-art art-dbms"><span>DB</span><i>▤</i></div><div class="resource-body"><div class="card-meta"><span class="pill pill-green">DBMS</span><span>📄 Notes</span></div><h3>Database Essentials</h3><p>Understand tables, keys, SQL queries, and database design.</p><button class="resource-open" data-note="dbms">Read quick notes <span>→</span></button></div>
+        </article>
+        <article class="resource-card" data-subject="Machine Learning" data-search="machine learning supervised unsupervised training model features">
+          <div class="resource-art art-ml"><span>ML</span><i>✳</i></div><div class="resource-body"><div class="card-meta"><span class="pill pill-purple">MACHINE LEARNING</span><span>📄 Notes</span></div><h3>Machine Learning 101</h3><p>Learn how models discover patterns from examples and data.</p><button class="resource-open" data-note="ml">Read quick notes <span>→</span></button></div>
+        </article>
+        <article class="resource-card" data-subject="Computer Networks" data-search="computer networks internet ip tcp udp router protocol">
+          <div class="resource-art art-network"><span>NET</span><i>⌁</i></div><div class="resource-body"><div class="card-meta"><span class="pill pill-orange">NETWORKS</span><span>📄 Notes</span></div><h3>Networking Basics</h3><p>Explore IP addresses, protocols, routers, and the internet.</p><button class="resource-open" data-note="networks">Read quick notes <span>→</span></button></div>
+        </article>
+        <article class="resource-card" data-subject="Artificial Intelligence" data-search="artificial intelligence ai search reasoning knowledge agent">
+          <div class="resource-art art-ai"><span>AI</span><i>✧</i></div><div class="resource-body"><div class="card-meta"><span class="pill pill-pink">ARTIFICIAL INTELLIGENCE</span><span>📄 Notes</span></div><h3>Introduction to AI</h3><p>Discover intelligent agents, reasoning, search, and applications.</p><button class="resource-open" data-note="ai">Read quick notes <span>→</span></button></div>
+        </article>
+        <article class="resource-card" data-subject="Python" data-search="python official documentation external reference">
+          <div class="resource-art art-reference"><span>↗</span><i>WEB</i></div><div class="resource-body"><div class="card-meta"><span class="pill pill-blue">PYTHON</span><span>🔗 Website</span></div><h3>Official Python Tutorial</h3><p>Continue learning with the official Python language tutorial.</p><a class="resource-open" href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener noreferrer">Open resource <span>↗</span></a></div>
+        </article>
+      </div>
+      <p class="no-results hidden" id="noResources">No resources match your search. Try another keyword or subject.</p>
+      <div class="center-action"><button class="button button-secondary" id="showAllResources">Show all resources</button></div>
+    </section>
+
+    <section class="quiz-banner section" id="quizzes">
+      <div class="quiz-banner-copy"><div class="eyebrow light-eyebrow">CHECK YOUR KNOWLEDGE</div><h2>A little practice<br>goes a long way.</h2><p>Pick a subject, answer a few questions, and learn from your results. No pressure — just progress.</p><a href="#quiz-app" class="button button-light">Choose a quiz <span>→</span></a></div>
+      <div class="quiz-banner-art"><div class="quiz-circle circle-one"></div><div class="quiz-circle circle-two"></div><div class="quiz-sheet"><div class="sheet-top"><span>QUICK CHECK</span><span>✦</span></div><div class="sheet-question">Which habit helps<br>you learn best?</div><div class="sheet-option selected"><span>✓</span> Practice regularly</div><div class="sheet-option"><span></span> Give up quickly</div><div class="sheet-option"><span></span> Never ask questions</div><div class="sheet-footer">Every question is a new opportunity.</div></div><div class="quiz-star">✦</div></div>
+    </section>
+
+    <section class="section content-section quiz-section" id="quiz-app">
+      <div class="section-heading"><div><div class="eyebrow">PRACTICE ZONE</div><h2>Choose your challenge</h2><p>Short quizzes with explanations to help you improve.</p></div></div>
+      <div class="quiz-choice-grid">
+        <button class="quiz-choice" data-quiz="Python"><span class="quiz-choice-icon icon-blue">Py</span><span class="quiz-choice-copy"><b>Python Basics</b><small>5 questions · Beginner</small></span><span class="choice-arrow">→</span></button>
+        <button class="quiz-choice" data-quiz="DBMS"><span class="quiz-choice-icon icon-green">DB</span><span class="quiz-choice-copy"><b>DBMS Basics</b><small>5 questions · Beginner</small></span><span class="choice-arrow">→</span></button>
+        <button class="quiz-choice" data-quiz="Machine Learning"><span class="quiz-choice-icon icon-purple">ML</span><span class="quiz-choice-copy"><b>Machine Learning</b><small>5 questions · Beginner</small></span><span class="choice-arrow">→</span></button>
+        <button class="quiz-choice" data-quiz="Computer Networks"><span class="quiz-choice-icon icon-orange">NW</span><span class="quiz-choice-copy"><b>Computer Networks</b><small>5 questions · Beginner</small></span><span class="choice-arrow">→</span></button>
+      </div>
+      <div class="quiz-panel hidden" id="quizPanel" aria-live="polite">
+        <div class="quiz-panel-header"><div><span class="pill pill-purple" id="quizSubjectPill">PYTHON</span><h3 id="quizTitle">Python Basics</h3></div><button class="icon-button" id="closeQuiz" aria-label="Close quiz">✕</button></div>
+        <div class="quiz-progress-top"><span id="questionCounter">Question 1 of 5</span><span id="questionPercent">20%</span></div><div class="quiz-progress-track"><span id="questionProgress"></span></div>
+        <h4 id="questionText">Question text</h4><div class="answer-list" id="answerList"></div>
+        <p class="quiz-feedback hidden" id="quizFeedback"></p>
+        <div class="quiz-controls"><button class="button button-secondary" id="previousQuestion">← Previous</button><button class="button button-primary" id="nextQuestion">Next question →</button><button class="button button-primary hidden" id="submitQuiz">Submit quiz ✓</button></div>
+        <div class="quiz-result hidden" id="quizResult"></div>
+      </div>
+    </section>
+
+    <section class="section progress-section" id="progress">
+      <div class="section-heading"><div><div class="eyebrow">YOUR JOURNEY</div><h2>Progress, not perfection.</h2><p>Your quiz results are saved in this browser, so you can see how far you've come.</p></div><button class="button button-secondary" id="clearProgress">Clear progress</button></div>
+      <div class="progress-metrics">
+        <article class="metric-card"><span class="metric-icon metric-blue">✓</span><span class="metric-label">Quizzes completed</span><b id="completedMetric">0</b><small>Attempts saved</small></article>
+        <article class="metric-card"><span class="metric-icon metric-purple">◎</span><span class="metric-label">Average score</span><b id="averageMetric">0%</b><small>Across all attempts</small></article>
+        <article class="metric-card"><span class="metric-icon metric-green">✦</span><span class="metric-label">Best score</span><b id="bestMetric">0%</b><small>Your personal best</small></article>
+      </div>
+      <div class="history-card"><div class="history-heading"><div><h3>Recent quiz attempts</h3><p>Keep practising to build confidence.</p></div><span class="history-icon">▤</span></div><div id="historyList" class="history-list"><div class="empty-history"><span>📚</span><b>Your learning story starts here.</b><p>Complete a quiz to see your progress.</p><a href="#quiz-app" class="text-link">Try your first quiz →</a></div></div></div>
+      <p class="privacy-note"><span>🔒</span> Your progress stays in this browser using local storage. It is not sent to a server.</p>
+    </section>
+
+    <section class="sdg-section" id="about">
+      <div class="sdg-inner section">
+        <div class="sdg-icon-large"><span>4</span><small>QUALITY<br>EDUCATION</small></div>
+        <div class="sdg-copy"><div class="eyebrow light-eyebrow">A GOAL THAT MATTERS</div><h2>Learning is a right,<br>not a privilege.</h2><p>EduConnect supports the spirit of United Nations Sustainable Development Goal 4: Quality Education. By bringing learning resources and self-assessment together, the project aims to make everyday learning easier to access.</p><a href="https://sdgs.un.org/goals/goal4" target="_blank" rel="noopener noreferrer" class="sdg-link">Learn about SDG 4 on the UN website ↗</a><small class="disclaimer">Student project for educational purposes. Not affiliated with or endorsed by the United Nations.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">E</span><span>Edu<span class="brand-accent">Connect</span></span></a><p>Making learning feel a little more possible, every day.</p><div class="footer-right"><span>Built to support SDG 4 · Quality Education</span><a href="#home">Back to top ↑</a></div></footer>
+
+  <div class="modal-backdrop hidden" id="notesModal" role="dialog" aria-modal="true" aria-labelledby="notesTitle">
+    <div class="notes-modal"><div class="modal-header"><span class="pill pill-blue">QUICK NOTES</span><button class="icon-button" id="closeNotes" aria-label="Close notes">✕</button></div><h2 id="notesTitle">Study notes</h2><div id="notesContent" class="notes-content"></div><button class="button button-primary modal-done" id="doneNotes">Got it</button></div>
+  </div>
+  <div class="toast hidden" id="toast" role="status"></div>
+</body>
+</html>
